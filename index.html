@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arsenal's European Trophy Drought</title>
   <meta name="description" content="Live timer showing how long it's been since Arsenal won a European trophy.">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
   <style>
     body {
@@ -31,35 +31,33 @@
 
     const render = () => {
       const elapsed = getElapsedTime();
-      document.title = `${elapsed.days} Days | Arsenal Drought`;
+      document.title = `${elapsed.days} Arsenal's European Drought`;
 
       document.getElementById("root").innerHTML = `
-        <div class="mb-6 flex flex-col items-center space-y-4">
+        <div class="flex flex-col items-center space-y-3 mb-6">
           <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal Logo" class="w-24 h-24"/>
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight whitespace-nowrap">
+          <h1 class="text-xl md:text-2xl lg:text-3xl text-white leading-tight whitespace-nowrap">
             Arsenal's European Trophy Drought
           </h1>
         </div>
 
-        <div class="max-w-lg mx-auto mb-10">
-          <div class="p-6 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-5xl md:text-7xl font-extrabold mb-2">${elapsed.days}</div>
-            <p class="text-base md:text-lg font-semibold uppercase tracking-wider">Days</p>
-          </div>
+        <div class="mb-6">
+          <div class="text-5xl md:text-7xl text-white mb-1">${elapsed.days}</div>
+          <p class="text-base md:text-lg uppercase tracking-wider text-white">Days</p>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-lg mx-auto">
+        <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-lg mx-auto -mt-2">
           <div class="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-xl md:text-2xl font-bold mb-1">${elapsed.hours}</div>
-            <div class="text-sm uppercase tracking-wide">Hours</div>
+            <div class="text-xl md:text-2xl text-white mb-1">${elapsed.hours}</div>
+            <div class="text-sm uppercase tracking-wide text-white">Hours</div>
           </div>
           <div class="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-xl md:text-2xl font-bold mb-1">${elapsed.minutes}</div>
-            <div class="text-sm uppercase tracking-wide">Minutes</div>
+            <div class="text-xl md:text-2xl text-white mb-1">${elapsed.minutes}</div>
+            <div class="text-sm uppercase tracking-wide text-white">Minutes</div>
           </div>
           <div class="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-xl md:text-2xl font-bold mb-1">${elapsed.seconds}</div>
-            <div class="text-sm uppercase tracking-wide">Seconds</div>
+            <div class="text-xl md:text-2xl text-white mb-1">${elapsed.seconds}</div>
+            <div class="text-sm uppercase tracking-wide text-white">Seconds</div>
           </div>
         </div>
       `;
