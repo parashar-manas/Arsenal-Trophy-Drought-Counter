@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arsenal's European Trophy Drought</title>
   <meta name="description" content="Live timer showing how long it's been since Arsenal won a European trophy.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
 <body class="bg-black text-white flex items-center justify-center min-h-screen overflow-hidden">
   <main id="root" class="text-center p-8 max-w-5xl mx-auto opacity-0 translate-y-8 transition-all duration-1000"></main>
@@ -28,33 +34,32 @@
       document.title = `${elapsed.days} Days | Arsenal Drought`;
 
       document.getElementById("root").innerHTML = `
-        <div class="mb-8">
-          <h1 class="text-2xl md:text-4xl lg:text-5xl font-mono font-bold text-white leading-tight whitespace-nowrap">
+        <div class="mb-6">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal Logo" class="w-16 h-16 mx-auto mb-4"/>
+          <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight whitespace-nowrap">
             Arsenal's European Trophy Drought
           </h1>
         </div>
 
-        <div class="flex items-center justify-center gap-4 text-white mb-6 flex-wrap">
-          <div class="text-6xl md:text-8xl lg:text-9xl font-mono font-black drop-shadow-lg">
+        <div class="relative">
+          <div class="text-6xl md:text-8xl lg:text-9xl font-extrabold drop-shadow-lg">
             ${elapsed.days}
           </div>
-          <div class="text-6xl md:text-8xl lg:text-9xl font-mono font-black drop-shadow-lg uppercase">
-            Days
-          </div>
+          <p class="text-lg md:text-xl font-semibold text-white uppercase tracking-wider mt-2">Days</p>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 md:gap-8 mt-8 max-w-lg mx-auto">
+        <div class="grid grid-cols-3 gap-4 md:gap-8 mt-10 max-w-lg mx-auto">
           <div class="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-2xl md:text-3xl font-mono font-bold text-white mb-1">${elapsed.hours}</div>
-            <div class="text-sm text-white uppercase tracking-wide font-mono">Hours</div>
+            <div class="text-2xl md:text-3xl font-bold mb-1">${elapsed.hours}</div>
+            <div class="text-sm uppercase tracking-wide">Hours</div>
           </div>
           <div class="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-2xl md:text-3xl font-mono font-bold text-white mb-1">${elapsed.minutes}</div>
-            <div class="text-sm text-white uppercase tracking-wide font-mono">Minutes</div>
+            <div class="text-2xl md:text-3xl font-bold mb-1">${elapsed.minutes}</div>
+            <div class="text-sm uppercase tracking-wide">Minutes</div>
           </div>
           <div class="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-2xl md:text-3xl font-mono font-bold text-white mb-1">${elapsed.seconds}</div>
-            <div class="text-sm text-white uppercase tracking-wide font-mono">Seconds</div>
+            <div class="text-2xl md:text-3xl font-bold mb-1">${elapsed.seconds}</div>
+            <div class="text-sm uppercase tracking-wide">Seconds</div>
           </div>
         </div>
       `;
