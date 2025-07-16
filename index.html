@@ -34,19 +34,19 @@
       document.title = `${elapsed.days} Arsenal's European Drought`;
 
       document.getElementById("root").innerHTML = `
-        <div class="flex flex-col items-center space-y-3 mb-6">
+        <div class="flex flex-col items-center space-y-5 mb-2">
           <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal Logo" class="w-24 h-24"/>
           <h1 class="text-xl md:text-2xl lg:text-3xl text-white leading-tight whitespace-nowrap">
             Arsenal's European Trophy Drought
           </h1>
         </div>
 
-        <div class="mb-6">
+        <div class="mb-4">
           <div class="text-5xl md:text-7xl text-white mb-1">${elapsed.days}</div>
           <p class="text-base md:text-lg uppercase tracking-wider text-white">Days</p>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-lg mx-auto -mt-2">
+        <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-lg mx-auto -mt-3">
           <div class="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
             <div class="text-xl md:text-2xl text-white mb-1">${elapsed.hours}</div>
             <div class="text-sm uppercase tracking-wide text-white">Hours</div>
